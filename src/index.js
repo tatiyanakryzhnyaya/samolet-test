@@ -6,14 +6,18 @@ import ruRU from 'antd/lib/locale-provider/ru_RU';
 import App from './app';
 import * as serviceWorker from './serviceWorker';
 import 'antd/dist/antd.css';
+import store from './redux/store';
+import { Provider } from "react-redux"
 
 
 ReactDOM.render(
-  <ConfigProvider locale={ruRU}>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </ConfigProvider>,
+  <Provider store={store}>
+    <ConfigProvider locale={ruRU}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </ConfigProvider>
+  </Provider>,
   document.getElementById('root'),
 );
 
