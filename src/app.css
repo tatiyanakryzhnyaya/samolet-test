@@ -6,3 +6,7 @@ a {
 a:hover {
     color: #003d76  !important;
 }
+
+main {
+    background: #ffffff !important;
+}

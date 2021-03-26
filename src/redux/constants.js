@@ -1,3 +1,5 @@
 export const FETCH_REGIONS = "FETCH_REGIONS";
 
 export const SET_REGIONS = "SET_REGIONS";
+
+export const LOADING_TOGGLE = "LOADING_TOGGLE";

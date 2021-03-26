@@ -3,12 +3,15 @@ import { connect } from "react-redux"
 import { marthc, matchPath } from "react-router-dom"
 import { fetchRegions } from "redux/actions";
 import styles from "./region.module.css"
+import Loader from 'components/loader';
 
-const Region = ({region, regions, fetchRegions,  match}) => {
+const Region = ({region, regions, fetchRegions,  match, loading}) => {
     
     useEffect(() => {
         if (!region) fetchRegions()
     }, [regions])
+
+    if (loading) return <Loader />
 
     return (
         <div className={styles.region}>
@@ -24,10 +27,10 @@ const Region = ({region, regions, fetchRegions,  match}) => {
 }
 
 const mapStateToProps = (state, props) => {
-    console.log(state.regions, props.match.params.id)
     return {
         region: state.regions.find(reg => reg.order ==  props.match.params.id),
-        regions: state.regions
+        regions: state.regions,
+        loading: state.loading
     }
 }
 export default connect(mapStateToProps, { fetchRegions })(Region)
