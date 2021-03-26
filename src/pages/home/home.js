@@ -2,7 +2,7 @@
 import styles from './home.module.css';
 
 
-export const Home = () => {
+const Home = () => {
     return (
         <div className={styles.home}>
             <p>
@@ -34,3 +34,5 @@ export const Home = () => {
         </div>
     )
 }
+
+export default Home;

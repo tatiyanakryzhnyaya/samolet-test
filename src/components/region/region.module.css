@@ -1,0 +1,9 @@
+.region {
+    padding: 40px 100px;
+    background: #ffffff;
+}
+
+.regionTitle {
+    font-weight: 600;
+    font-size: 24px;
+}
