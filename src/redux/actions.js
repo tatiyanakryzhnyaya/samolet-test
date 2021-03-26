@@ -1,11 +1,11 @@
 import { getData } from "../api";
-import store from "./store"
+import { SET_REGIONS, FETCH_REGIONS } from './constants';
 
-export const fetchRegions = async () => {
+
+export const fetchRegions = () => async (dispatch) => {
     await getData()
-        .then(res => store.dispatch({
-            type: 'SET_REGIONS',
+        .then(res => dispatch({
+            type: SET_REGIONS,
             payload: {entity: res}
         }))
-    
 }
