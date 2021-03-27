@@ -1,17 +1,9 @@
-import { useEffect } from "react";
 import { connect } from "react-redux"
-import { marthc, matchPath } from "react-router-dom"
-import { fetchRegions } from "redux/actions";
 import styles from "./region.module.css"
-import Loader from 'components/loader';
 
-const Region = ({region, regions, fetchRegions,  match, loading}) => {
-    
-    useEffect(() => {
-        if (!region) fetchRegions()
-    }, [regions])
+const Region = ({region}) => {
 
-    if (loading) return <Loader />
+    if (!region) return <>Регион не выбран</>
 
     return (
         <div className={styles.region}>
@@ -26,12 +18,5 @@ const Region = ({region, regions, fetchRegions,  match, loading}) => {
     )
 }
 
-const mapStateToProps = (state, props) => {
-    return {
-        region: state.regions.find(reg => reg.order ==  props.match.params.id),
-        regions: state.regions,
-        loading: state.loading
-    }
-}
-export default connect(mapStateToProps, { fetchRegions })(Region)
+export default Region
 

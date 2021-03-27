@@ -1,5 +1,5 @@
 import { getData } from "../api";
-import { SET_REGIONS, FETCH_REGIONS, LOADING_TOGGLE } from './constants';
+import { SET_REGIONS, LOADING_TOGGLE } from './constants';
 
 
 export const fetchRegions = () => async (dispatch) => {
