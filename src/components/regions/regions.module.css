@@ -2,3 +2,15 @@
     padding: 40px 100px;
     background: #ffffff;
 }
+
+.regions a {
+    margin: 10px 0;
+}
+
+.regions a:hover {
+    background: #e3e3e3;
+}
+
+.searchInput {
+    width: 100%;
+}

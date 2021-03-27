@@ -8,7 +8,7 @@ const Header = () => {
                 <h1>Samolet Test</h1>
             </Link>
             <Link to="/regions">
-                Перейти к списку регионов
+                Cписок регионов
             </Link>
         </div>
     )
